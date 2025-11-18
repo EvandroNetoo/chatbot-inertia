@@ -22,7 +22,12 @@ class DataShareMiddleware(object):
 
         share(request, messages=messages)
 
-        share(request, user=lambda: request.user)
+        share(
+            request,
+            user=lambda: request.user
+            if request.user.is_authenticated
+            else None,
+        )
 
         response = self.get_response(request)
 

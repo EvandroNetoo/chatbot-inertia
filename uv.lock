@@ -1,5 +1,5 @@
 version = 1
-revision = 2
+revision = 3
 requires-python = ">=3.12"
 resolution-markers = [
     "python_full_version >= '3.13'",
@@ -249,6 +249,7 @@ dependencies = [
     { name = "django" },
     { name = "django-environ" },
     { name = "django-ninja" },
+    { name = "django-q2" },
     { name = "django-vite" },
     { name = "gunicorn" },
     { name = "inertia-django" },
@@ -273,6 +274,7 @@ requires-dist = [
     { name = "django", specifier = ">=5.1.4" },
     { name = "django-environ", specifier = ">=0.11.2" },
     { name = "django-ninja", specifier = ">=1.5.0" },
+    { name = "django-q2", specifier = ">=1.8.0" },
     { name = "django-vite", specifier = ">=3.0.5" },
     { name = "gunicorn", specifier = ">=23.0.0" },
     { name = "inertia-django", specifier = ">=0.6.0" },
@@ -362,6 +364,31 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/cc/12/4f3d739994b15a5af7da9b028ddad6bbb2f6634b5b1f0fc19e6e29ccacad/django_ninja-1.5.0.tar.gz", hash = "sha256:181bc8266a684be8c4cdd8f555d8ccbbc72e9fad86a5928ddccdd13faf73a1c5", size = 3725725, upload-time = "2025-11-13T17:58:02.502Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/e6/51/86968a38f074a56a675d72d470dce9405c9ddb53856c1686ca5e2ba44f81/django_ninja-1.5.0-py3-none-any.whl", hash = "sha256:e305fc42588406a202d4479263b501813ec863a3a4e11cb091fb905ecdf9bc62", size = 2428939, upload-time = "2025-11-13T17:57:59.967Z" },
+]
+
+[[package]]
+name = "django-picklefield"
+version = "3.3"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "django" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/a6/70/11411d4f528e4fad57a17dae81c85da039feba90c001b64e677fc0925a97/django-picklefield-3.3.tar.gz", hash = "sha256:4e76dd20f2e95ffdaf18d641226ccecc169ff0473b0d6bec746f3ab97c26b8cb", size = 9559, upload-time = "2025-03-13T03:34:12.784Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/34/e1/988fa6ded7275bb11e373ccd4b708af477f12027d3ee86b7cb5fc5779412/django_picklefield-3.3-py3-none-any.whl", hash = "sha256:d6f6fd94a17177fe0d16b0b452a9860b8a1da97b6e70633ab53ade4975f1ce9a", size = 9565, upload-time = "2025-03-13T03:34:11.209Z" },
+]
+
+[[package]]
+name = "django-q2"
+version = "1.8.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "django" },
+    { name = "django-picklefield" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/59/c3/682d3966d9c56723bccd07d98b52a3a6e50a1ff76eec9f960bfa7d31da44/django_q2-1.8.0.tar.gz", hash = "sha256:e86b9625c0ce57a5ae31ca8fd7e798d63b9ef91a227c52f8b47536ba50b2b284", size = 77161, upload-time = "2025-04-25T14:42:37.384Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/3f/85/aa9838ac8b65dff962366e0d79eed5fa0c2170218ea0122a110ca4638471/django_q2-1.8.0-py3-none-any.whl", hash = "sha256:78aaaf18dff1ad3e35bcf6556666f2c26494120f0b75961c13206e37d180dfaa", size = 89579, upload-time = "2025-04-25T14:42:36.029Z" },
 ]
 
 [[package]]
@@ -1733,7 +1760,7 @@ dependencies = [
     { name = "colorama" },
     { name = "mslex", marker = "sys_platform == 'win32'" },
     { name = "psutil" },
-    { name = "tomli", marker = "python_full_version < '4.0'" },
+    { name = "tomli", marker = "python_full_version < '4'" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/c7/44/572261df3db9c6c3332f8618fafeb07a578fd18b06673c73f000f3586749/taskipy-1.14.1.tar.gz", hash = "sha256:410fbcf89692dfd4b9f39c2b49e1750b0a7b81affd0e2d7ea8c35f9d6a4774ed", size = 14475, upload-time = "2024-11-26T16:37:46.155Z" }
 wheels = [

@@ -60,7 +60,7 @@ const enviarMensagem = async () => {
 </script>
 
 <template>
-    <LayoutAnonimo>
+    <Layout>
         <div class="max-w-3xl h-full max-h-[calc(100vh-6rem)] mx-auto flex flex-col gap-6">
             <div class="grow max-h-full overflow-x-auto overflow-y-visible p-2">
                 <Mensagem v-for="(m, i) in mensagens" :key="i" :mensagem="m.mensagem" :tipo="m.tipo" />
@@ -78,5 +78,5 @@ const enviarMensagem = async () => {
                 </label>
             </form>
         </div>
-    </LayoutAnonimo>
+    </Layout>
 </template>

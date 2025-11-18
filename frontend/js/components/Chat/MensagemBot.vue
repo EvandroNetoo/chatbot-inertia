@@ -8,7 +8,7 @@ console.log(md.render(props.mensagem));
 </script>
 
 <template>
-    <div class="flex flex-col items-start gap-2 mt-4 group">
+    <div class="flex flex-col items-start gap-2 mt-4 group text-black">
 
         <div v-if="mensagem" class="markdown" v-html="md.render(mensagem)"></div>
         <div v-else class="inline-grid *:[grid-area:1/1]">
@@ -41,8 +41,3 @@ console.log(md.render(props.mensagem));
         </div>
     </div>
 </template>
-
-<style>
-/* Wrapper para o conteúdo Markdown */
-
-</style>

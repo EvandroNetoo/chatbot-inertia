@@ -8,6 +8,6 @@ const page = usePage()
 </script>
 
 <template>
-    <Chat v-if="!page.props.user" />
-    <ChatAnonimo v-else />
+    <!-- <Chat v-if="!page.props.user" /> -->
+    <ChatAnonimo  />
 </template>
